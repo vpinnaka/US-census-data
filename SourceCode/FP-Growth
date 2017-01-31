@@ -1,0 +1,13 @@
+#!/bin/bash
+################################################################################
+#  slurm.sbatch - A sample submit script for SLURM that illustrates how to
+#    spin up a Hadoop cluster (multiple nodes/cores) for a spark task using YARN
+#
+#  Longzhuang Li, Texas A&M Univrsity-Corpus Christi                   9/14/2016
+################################################################################
+ 
+export HADOOP_CONF_DIR=$PWD/hadoop-conf.$SLURM_JOBID
+ 
+ 
+/cm/shared/apps/hadoop/spark-2.0.0-bin-hadoop2.6/bin/spark-submit --class my.spark.JavaSimpleFPGrowth --master yarn --deploy-mode client --driver-memory 4g --executor-memory 2G --executor-cores 20 --queue thequeue  target/first-example-1.0-SNAPSHOT.jar 100
+ 

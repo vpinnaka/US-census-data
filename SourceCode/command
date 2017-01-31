@@ -1,0 +1,11 @@
+## Execute the java spark application using maven on local machine using the default setting (one node) ##
+mvn exec:java -Dexec.mainClass="JavaSimpleFPGrowth"
+
+## Execute the java spark application using spark-submit on local machine (one node) ##
+/cm/shared/apps/hadoop/spark-2.0.0-bin-hadoop2.6/bin/spark-submit --class my.spark.JavaSimpleFPGrowth --master local[8]   target/first-example-1.0-SNAPSHOT.jar
+
+## Execute the java spark application using spark-submit on a spark standalone cluster in client deploy mode (multiple node/cores) ##
+/cm/shared/apps/hadoop/spark-2.0.0-bin-hadoop2.6/bin/spark-submit --class my.spark.JavaSimpleFPGrowth --master spark://172.18.3.57:8088 --executor-memory 4G --total-executor-cores 80  target/first-example-1.0-SNAPSHOT.jar 1000
+
+## Execute the java spark application using spark-submit on a YARN cluster ##
+sbatch FP-Growth
