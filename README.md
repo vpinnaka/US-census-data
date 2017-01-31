@@ -6,8 +6,8 @@ Data mining techniques applied on census data for obtaining recommendations
 <ul> 
   <li>Employment status of the entire population in United states.</li>
   <li>Education levels of normal US citizen.</li>
-  <li>Taxable income amount range for individuals.<li>
-  <li>Female Entrepreneurs in United states<li>
+  <li>Taxable income amount range for individuals.</li>
+  <li>Female Entrepreneurs in United states</li>
 </ul>
 
 <h3>Dataset obtained from<h3>
